@@ -1,0 +1,7 @@
+name: NoFullHealthEating
+main: com.patschgo.nofullheal.NoFullHealthEatingPlugin
+version: 1.0.0
+author: patschgo
+api-version: 1.7
+
+# Prevents players from eating food to heal when they are already at full health.

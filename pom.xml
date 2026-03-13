@@ -1,0 +1,59 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.patschgo</groupId>
+  <artifactId>nofullhealing</artifactId>
+  <version>1.0.0</version>
+  <name>NoFullHealthEating</name>
+  <description>A Bukkit plugin for Minecraft Beta 1.7.3 that prevents eating when already at full health.</description>
+  <url>https://github.com/patschgoo/NoFullHealthEating</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+    <finalName>NoFullHealthEating</finalName>
+  </properties>
+
+  <dependencies>
+    <!--
+      The CraftBukkit / Poseidon fork dependency should be provided by the server runtime.
+      This project compiles against the Bukkit API and is built with 'provided' scope.
+
+      If you have a Maven artifact for @retromcorg/Project-Poseidon, replace the groupId/artifactId/version
+      below or add the corresponding repository configuration.
+    -->
+    <dependency>
+      <groupId>org.bukkit</groupId>
+      <artifactId>craftbukkit</artifactId>
+      <version>1.0.60-R1.0</version>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <source>${maven.compiler.source}</source>
+          <target>${maven.compiler.target}</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.2</version>
+        <configuration>
+          <finalName>${project.build.finalName}</finalName>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

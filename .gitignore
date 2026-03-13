@@ -1,0 +1,9 @@
+# Build output
+/target/
+
+# IDE
+*.iml
+.idea/
+
+# Misc
+*.log
