@@ -3,14 +3,17 @@
 A simple **Minecraft Beta 1.7.3** Bukkit plugin that prevents players from eating food to heal when they are already at full health.
 
 
-## 🛠️ Build (Maven)
+## 🛠️ Compiling
+---------
+Showcase uses Maven to handle its dependencies.
 
+* Install [Maven 2 or 3](http://maven.apache.org/download.html)  
+* Checkout this repo and run:
 ```bash
-mvn clean package
+`mvn clean`
 ```
 
 ✅ Output: `target/NoFullHealthEating.jar`
-
 
 ## 🚀 Installation
 1. Drop `target/NoFullHealthEating.jar` into your server's `plugins/` folder.
